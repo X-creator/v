@@ -81,7 +81,7 @@ export type FetchData = <Action extends Methods["request"]["action"]>(
 export interface Options {
   path: string;
   page: string | number;
-  searchParams: Record<string, string>;
+  searchParams: Record<string, string | number>;
   hash: string;
 }
 

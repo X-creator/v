@@ -21,7 +21,7 @@ const SCROLL_ANCHOR = "start";
 export default async function Home({ searchParams }: HomeProps) {
   const page = Number(searchParams.page) || 1;
   const product = searchParams.product;
-  const price = searchParams.price;
+  const price = Number(searchParams.price);
   const brand = searchParams.brand;
   const isFiltersApply = Boolean(brand || price || product);
 
