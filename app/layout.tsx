@@ -1,5 +1,7 @@
+import { ReactNode } from "react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import clsx from "clsx/lite";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -12,11 +14,11 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className="scroll-smooth">
+      <body className={clsx(inter.className, "dark:bg-black", "antialiased")}> {children} </body>
     </html>
   );
 }
