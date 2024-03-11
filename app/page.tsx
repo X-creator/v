@@ -54,6 +54,7 @@ export default async function Home({ searchParams }: HomeProps) {
       </section>
 
       <Pagination
+        // @ts-ignore
         makeUrl={makeUrl({ path: "/", searchParams: params, hash: SCROLL_ANCHOR })}
         pages={pages}
         prevPage={prevPage}

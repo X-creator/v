@@ -71,6 +71,7 @@ export const paginator = ({ total, limit, current, leftRange = 2, rightRange = 2
   };
 };
 
+// @ts-ignore
 export const makeUrl: MakeUrl = (options) => {
   if (Object.keys(options).length < 4) {
     return (partialOptions) => makeUrl({ ...partialOptions, ...options });
