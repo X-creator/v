@@ -16,7 +16,7 @@ interface HomeProps {
 }
 
 const LIMIT = 50;
-export const SCROLL_ANCHOR = "start";
+const SCROLL_ANCHOR = "start";
 
 export default async function Home({ searchParams }: HomeProps) {
   const page = Number(searchParams.page) || 1;
